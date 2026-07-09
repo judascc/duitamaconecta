@@ -7,25 +7,30 @@ const whatsapp =
 
 return (
 
-<header className="
+<header
+className="
 sticky
 top-0
 z-50
 bg-white/90
 backdrop-blur-md
 shadow-sm
-">
+"
+>
 
 
-<div className="
+<div
+className="
 max-w-7xl
 mx-auto
-px-5
-py-4
+px-4
+py-3
 flex
 items-center
 justify-between
-">
+gap-3
+"
+>
 
 
 
@@ -36,14 +41,18 @@ href="/"
 className="
 flex
 items-center
-gap-3
+gap-2
+min-w-0
 "
 >
 
 
-<div className="
-w-12
-h-12
+<div
+className="
+w-10
+h-10
+md:w-12
+md:h-12
 rounded-2xl
 bg-gradient-to-br
 from-yellow-400
@@ -52,40 +61,56 @@ flex
 items-center
 justify-center
 shadow-md
+text-xl
 "
 >
-
 📍
-
 </div>
 
 
 
-<div>
+<div
+className="
+leading-none
+"
+>
 
-<h1 className="
-text-2xl
+
+<h1
+className="
+text-xl
+md:text-3xl
 font-black
 text-gray-900
-tracking-tight
-">
+whitespace-nowrap
+"
+>
 
 Duitama
 
-<span className="
+<span
+className="
 text-yellow-500
-">
+"
+>
  Conecta
 </span>
+
 
 </h1>
 
 
-<p className="
+
+<p
+className="
+hidden
+sm:block
 text-xs
 text-gray-500
 font-medium
-">
+mt-1
+"
+>
 
 Negocios locales
 
@@ -95,22 +120,26 @@ Negocios locales
 </div>
 
 
+
 </a>
 
 
 
 
 
-{/* MENU */}
 
-<nav className="
+{/* MENU DESKTOP */}
+
+<nav
+className="
 hidden
-md:flex
+lg:flex
 items-center
-gap-10
+gap-8
 font-semibold
 text-gray-700
-">
+"
+>
 
 
 <a
@@ -137,14 +166,14 @@ Anúnciate
 </a>
 
 
-
 </nav>
 
 
 
 
 
-{/* BOTON WHATSAPP */}
+
+{/* WHATSAPP SIEMPRE VISIBLE */}
 
 <a
 href={whatsapp}
@@ -153,16 +182,20 @@ className="
 bg-green-500
 hover:bg-green-600
 text-white
-px-5
+px-4
+md:px-6
 py-3
 rounded-2xl
-font-bold
+font-black
 shadow-lg
 flex
 items-center
 gap-2
 transition
 hover:scale-105
+text-sm
+md:text-base
+whitespace-nowrap
 "
 >
 
@@ -172,10 +205,8 @@ hover:scale-105
 </span>
 
 
-<span className="hidden sm:block">
-
+<span>
 WhatsApp
-
 </span>
 
 
