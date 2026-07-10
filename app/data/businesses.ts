@@ -96,6 +96,61 @@ views:2780,
 clicks:210,
 
 priority:true
+},
+
+
+{
+id:6,
+name:"Laura Sport",
+category:"Ropa Deportiva",
+description:"Tienda virtual de ropa deportiva para dama y caballero ",
+image:"/negocios/laurasport.jpg",
+location:"Duitama",
+whatsapp:"573212132334",
+
+tag:"SERVICIO RÁPIDO",
+offer:"Solo en live precios al por mayor desde una unidad.",
+
+views:30,
+clicks:2,
+
+priority:true
+},
+
+{
+id:7,
+name:"GOK",
+category:"Diseño y construcción",
+description:"Diseñamos y desarrollamos soluciones arquitectónicas que combinan ingeniería y diseño creando espacios más eficientes, duraderos y preparados para las necesidades del futuro.",
+image:"/negocios/gok.jpg",
+location:"Duitama - Carrera 16 Nº 16 - 52 oficina 301",
+whatsapp:"573164766140",
+
+tag:"Oferta Julio",
+offer:"Al contratar la obra con nosotros desarrollamos los diseños gratis.",
+
+views:45,
+clicks:3,
+
+priority:true
+},
+
+{
+id:8    ,
+name:"Ferreteria Macano",
+category:"Fereteria",
+description:"Ferreteria y bricolaje",
+image:"/negocios/ferreteria.jpg",
+location:"(Nobsa) Km 9 vía Duitama - Nobsa",
+whatsapp:"573115864418",
+
+tag:"PROMOCIONES",
+offer:"Ferreteria con soluciones innovadoras.",
+
+views:30,
+clicks:6,
+
+priority:true
 }
 
 ];
