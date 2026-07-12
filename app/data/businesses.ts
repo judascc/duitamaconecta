@@ -12,7 +12,7 @@ whatsapp:"573001234567",
 tag:"PROMO DEL DÍA",
 offer:"Desayuno + Café desde $15.000",
 
-views:2450,
+views:2455,
 clicks:186,
 
 priority:true
@@ -32,7 +32,7 @@ whatsapp:"573001234568",
 tag:"DESCUENTO ESPECIAL",
 offer:"10% OFF en herramientas seleccionadas",
 
-views:1890,
+views:1895,
 clicks:124,
 
 priority:false
@@ -52,8 +52,8 @@ whatsapp:"573001234569",
 tag:"MENU DESTACADO",
 offer:"Almuerzo completo desde $18.000",
 
-views:3200,
-clicks:275,
+views:3210,
+clicks:276,
 
 priority:true
 },
@@ -72,8 +72,8 @@ whatsapp:"573001234570",
 tag:"NUEVA COLECCIÓN",
 offer:"2 prendas con precio especial",
 
-views:1560,
-clicks:98,
+views:1500,
+clicks:9,
 
 priority:false
 },
@@ -92,8 +92,8 @@ whatsapp:"573001234571",
 tag:"SERVICIO RÁPIDO",
 offer:"Diagnóstico gratis por WhatsApp",
 
-views:2780,
-clicks:210,
+views:2800,
+clicks:220,
 
 priority:true
 },
@@ -111,8 +111,8 @@ whatsapp:"573212132334",
 tag:"SERVICIO RÁPIDO",
 offer:"Solo en live precios al por mayor desde una unidad.",
 
-views:30,
-clicks:2,
+views:50,
+clicks:7,
 
 priority:true
 },
@@ -129,8 +129,8 @@ whatsapp:"573164766140",
 tag:"Oferta Julio",
 offer:"Al contratar la obra con nosotros desarrollamos los diseños gratis.",
 
-views:45,
-clicks:3,
+views:87,
+clicks:9,
 
 priority:true
 },
@@ -147,8 +147,8 @@ whatsapp:"573115864418",
 tag:"PROMOCIONES",
 offer:"Ferreteria con soluciones innovadoras.",
 
-views:30,
-clicks:6,
+views:35,
+clicks:7,
 
 priority:true
 }
