@@ -151,6 +151,139 @@ views:35,
 clicks:7,
 
 priority:true
+},
+
+{
+id:9    ,
+name:"ApiColmenas de Socha",
+category:"Alimentos",
+description:"Miel, Polen, Colmenas",
+image:"/negocios/apicolmenasdesocha.jpg",
+location:"Duitama",
+whatsapp:"573112457110",
+
+tag:"PROMOCIONES",
+offer:"Miel 500ml + Polen 125gr 50.000COP",
+
+views:35,
+clicks:7,
+
+priority:true
+},
+
+{
+id:10    ,
+name:"El Bohio - Producciones",
+category:"Musica",
+description:"Musica, video Producciones",
+image:"/negocios/elbohio.jpg",
+location:"Duitama",
+whatsapp:"573112457110",
+
+tag:"Oeerta",
+offer:"Buscas donde exponer tus artes culturaes. canto produccion musical, Bienvenido.",
+
+views:35,
+clicks:7,
+
+priority:true
+},
+
+{
+id:11   ,
+name:"Tynza Capital",
+category:"Finanzas",
+description:"Trading, Criptos, Acciones",
+image:"/negocios/tynza.jpg",
+location:"Duitama",
+whatsapp:"573112457110",
+
+tag:"Oferta",
+offer:"Registro Gratis 2026",
+
+views:35,
+clicks:7,
+
+priority:true
+},
+
+{
+id:1   ,
+name:"Digame Licenciado",
+category:"Educación",
+description:"Nueva tendencia educacional.",
+image:"/negocios/digamelicenciado.jpg",
+location:"Duitama",
+whatsapp:"573112457110",
+
+tag:"PROMOCIONES",
+offer:"Cursos y proyectos de robotica en tu barrio.",
+
+views:35,
+clicks:7,
+
+priority:true
+},
+
+{
+id:13   ,
+name:"NegoLink",
+category:"Publicidad",
+description:"Marketing Digital, Paginas Web, Marketplace.",
+image:"/negocios/negolink.jpg",
+location:"duitama",
+whatsapp:"573112457110",
+
+tag:"PROMOCIONES",
+offer:"FPaquetes para que tu empresa crezca en internet y en Duitama.",
+
+views:35,
+clicks:7,
+
+priority:true
+},
+
+{
+id:14   ,
+name:"Deissy Pijamas",
+category:"Ropa Mujer",
+description:"FPijamas y maás",
+image:"/negocios/.jpg",
+location:"Duitama",
+whatsapp:"5731",
+
+tag:"PROMOCIONES",
+offer:"conjjuntos en Pijama, Ventas por TikTok",
+
+views:35,
+clicks:7,
+
+priority:true
+},
+
+{
+id:15    ,
+name:"Arequipe",
+category:"Alimentos",
+description:"arequipe y manjares deliciosos.",
+image:"/negocios/.jpg",
+location:"Duitama",
+whatsapp:"573115864418",
+
+tag:"Oferta",
+offer:"FEnvase portable para todo tipo de publico.",
+
+views:35,
+clicks:7,
+
+priority:true
 }
+
+
+
+
+
+
+
 
 ];
