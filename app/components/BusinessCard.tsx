@@ -1,70 +1,325 @@
+"use client";
+
+import { useEffect, useState, useRef } from "react";
+
+import { getBusinessMetrics } from "../utils/metrics";
+import { calculateScore } from "../utils/ranking";
+import { trackEvent } from "../utils/analytics";
+
+
 type Business = {
+
   id:number;
+
   name:string;
+
   category:string;
+
   description:string;
+
   image:string;
+
   location:string;
+
   whatsapp:string;
+
   tag:string;
+
   offer:string;
 
-  views:number;
-  clicks:number;
-}
+};
 
+
+type Metrics = {
+
+  views:number;
+
+  whatsappClicks:number;
+
+  shares:{
+    whatsapp:number;
+    facebook:number;
+    instagram:number;
+  };
+
+};
 
 
 
 export default function BusinessCard({
+
 business
+
 }:{
 business:Business
+
 }){
 
 
-return(
+const cardRef = useRef<HTMLDivElement|null>(null);
+
+
+const [viewed,setViewed] = useState(false);
+
+
+
+const [metrics,setMetrics] = useState<Metrics>({
+
+views:0,
+
+whatsappClicks:0,
+
+shares:{
+
+whatsapp:0,
+
+facebook:0,
+
+instagram:0
+
+}
+
+});
+
+
+
+// =============================
+// REGISTRAR VISITA
+// =============================
+
+useEffect(()=>{
+
+
+const observer = new IntersectionObserver(
+
+(entries)=>{
+
+
+if(
+
+entries[0].isIntersecting &&
+
+!viewed
+
+){
+
+
+trackEvent(
+
+business.id,
+
+"VIEW"
+
+);
+
+
+setViewed(true);
+
+
+}
+
+
+},
+
+{
+threshold:0.5
+}
+
+
+);
+
+
+
+if(cardRef.current){
+
+observer.observe(cardRef.current);
+
+}
+
+
+
+return ()=>{
+
+observer.disconnect();
+
+};
+
+
+
+},[
+
+business.id,
+
+viewed
+
+]);
+
+
+
+
+
+// =============================
+// CARGAR METRICAS SUPABASE
+// =============================
+
+
+useEffect(()=>{
+
+
+async function loadMetrics(){
+
+
+try{
+
+
+const data = await getBusinessMetrics(
+
+business.id
+
+);
+
+
+
+setMetrics({
+
+views:data.views ?? 0,
+
+whatsappClicks:data.whatsappClicks ?? 0,
+
+shares:{
+
+whatsapp:data.shares?.whatsapp ?? 0,
+
+facebook:data.shares?.facebook ?? 0,
+
+instagram:data.shares?.instagram ?? 0
+
+}
+
+});
+
+
+
+console.log(
+
+"METRICAS REALES",
+
+business.name,
+
+data
+
+);
+
+
+
+}
+
+catch(error){
+
+
+console.error(
+
+"ERROR CARGANDO METRICAS",
+
+error
+
+);
+
+
+}
+
+
+
+}
+
+
+
+loadMetrics();
+
+
+
+},[business.id,business.name]);
+
+
+
+
+
+
+
+// =============================
+// CALCULAR SCORE
+// =============================
+
+
+const score = calculateScore({
+
+views:metrics.views,
+
+whatsappClicks:metrics.whatsappClicks,
+
+compartir:{
+
+whatsapp:metrics.shares.whatsapp,
+
+facebook:metrics.shares.facebook,
+
+instagram:metrics.shares.instagram
+
+}
+
+});
+
+
+
+
+
+
+return (
+
 
 <div
+
+ref={cardRef}
+
 className="
 bg-white
-rounded-[2rem]
+rounded-3xl
+shadow-lg
 overflow-hidden
-shadow-xl
-border
-border-gray-100
-group
+hover:-translate-y-1
+transition
+duration-300
 "
->
 
+>
 
 
 {/* IMAGEN */}
 
-<div
-className="
+<div className="
 relative
-h-72
-"
->
+h-64
+">
+
 
 <img
+
 src={business.image}
+
 alt={business.name}
+
 className="
 w-full
 h-full
 object-cover
-group-hover:scale-105
-transition
-duration-500
 "
+
 />
 
 
-{/* ETIQUETA */}
 
 <div
+
 className="
 absolute
 top-5
@@ -77,81 +332,171 @@ rounded-full
 font-black
 text-sm
 "
+
 >
 
 🔥 {business.tag}
 
-</div>
-
 
 </div>
 
-<div className="
+
+</div>
+
+
+
+
+
+{/* METRICAS */}
+
+
+<div
+
+className="
+px-6
 mt-5
 flex
 gap-4
+flex-wrap
 text-sm
 text-gray-500
-">
+"
+
+>
 
 
-<p>
-👁 {business.views} vistas
-</p>
+<div>
+
+🔥 Ranking:
+
+<b>
+
+{score}
+
+</b>
+
+</div>
 
 
-<p>
-💬 {business.clicks} contactos
-</p>
+
+<div>
+
+👁 {metrics.views}
+
+vistas
+
+</div>
+
+
+
+
+<div>
+
+💬 {metrics.whatsappClicks}
+
+WhatsApp
+
+</div>
+
+
+
+
+<div>
+
+🟢 {metrics.shares.whatsapp}
+
+compartidos
+
+</div>
+
+
+
+
+<div>
+
+🔵 {metrics.shares.facebook}
+
+Facebook
+
+</div>
+
+
+
+
+<div>
+
+🟣 {metrics.shares.instagram}
+
+Instagram
+
+</div>
+
 
 
 </div>
+
+
+
+
 
 
 
 {/* CONTENIDO */}
 
+
+
 <div
+
 className="
 p-6
 "
+
 >
 
 
-<p
+<div
+
 className="
-text-yellow-500
+text-yellow-600
 font-bold
-text-sm
 "
+
 >
 
 {business.category}
 
-</p>
+</div>
 
 
 
-<h3
+
+
+<h2
+
 className="
 text-3xl
 font-black
 mt-2
 text-gray-900
 "
+
 >
 
 {business.name}
 
-</h3>
+</h2>
+
+
 
 
 
 <p
+
 className="
 text-gray-600
 mt-3
 "
+
 >
 
 {business.description}
@@ -160,37 +505,50 @@ mt-3
 
 
 
+
+
+
+
 <div
+
 className="
 mt-5
 bg-yellow-50
 rounded-2xl
 p-4
 "
+
 >
 
 
-<p
+<div
+
 className="
-text-sm
-text-gray-500
+font-bold
+text-yellow-600
 "
+
 >
-Promoción
-</p>
+
+PROMOCIÓN
+
+</div>
 
 
-<p
+
+<div
+
 className="
 text-xl
 font-black
 text-yellow-600
 "
+
 >
 
 {business.offer}
 
-</p>
+</div>
 
 
 </div>
@@ -198,22 +556,49 @@ text-yellow-600
 
 
 
-<p
+
+
+
+<div
+
 className="
 mt-4
 text-gray-500
 "
+
 >
 
 📍 {business.location}
 
-</p>
+</div>
+
+
+
 
 
 
 
 <a
+
 href={`https://wa.me/${business.whatsapp}`}
+
+
+onClick={()=>{
+
+
+trackEvent(
+
+business.id,
+
+"WHATSAPP_CLICK"
+
+);
+
+
+}}
+
+
+
 className="
 mt-6
 block
@@ -228,21 +613,27 @@ text-lg
 transition
 shadow-lg
 "
+
 >
 
+
 💬 Pedir por WhatsApp
+
 
 </a>
 
 
 
-</div>
 
 
 </div>
 
 
 
-)
+</div>
+
+
+);
+
 
 }

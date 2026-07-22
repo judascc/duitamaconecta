@@ -206,7 +206,7 @@ whitespace-nowrap
 
 
 <span>
-WhatsApp
+Escribenos a Whatsapp
 </span>
 
 

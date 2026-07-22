@@ -13,7 +13,15 @@ tag:"PROMO DEL DÍA",
 offer:"Desayuno + Café desde $15.000",
 
 views:2455,
-clicks:186,
+whatsappClicks:186,
+
+compartir:{
+    whatsapp: 10,
+    facebook: 13,
+    instagram: 4
+},
+
+
 
 priority:true
 },
@@ -33,9 +41,17 @@ tag:"DESCUENTO ESPECIAL",
 offer:"10% OFF en herramientas seleccionadas",
 
 views:1895,
-clicks:124,
+whatsappClicks:132,
 
-priority:false
+compartir:{
+    whatsapp: 45,
+    facebook: 67,
+    instagram: 87
+},
+
+
+
+priority:true
 },
 
 
@@ -53,7 +69,13 @@ tag:"MENU DESTACADO",
 offer:"Almuerzo completo desde $18.000",
 
 views:3210,
-clicks:276,
+whatsappClicks:432,
+
+compartir:{
+    whatsapp: 56,
+    facebook: 34,
+    instagram: 89
+},
 
 priority:true
 },
@@ -75,6 +97,14 @@ offer:"2 prendas con precio especial",
 views:1500,
 clicks:9,
 
+whatsappClicks:123,
+
+compartir:{
+    whatsapp: 12,
+    facebook: 23,
+    instagram: 34
+},
+
 priority:false
 },
 
@@ -93,7 +123,13 @@ tag:"SERVICIO RÁPIDO",
 offer:"Diagnóstico gratis por WhatsApp",
 
 views:2800,
-clicks:220,
+whatsappClicks:432,
+
+compartir:{
+    whatsapp: 56,
+    facebook: 56,
+    instagram: 56
+},
 
 priority:true
 },
@@ -112,7 +148,13 @@ tag:"SERVICIO RÁPIDO",
 offer:"Solo en live precios al por mayor desde una unidad.",
 
 views:50,
-clicks:7,
+whatsappClicks:432,
+
+compartir:{
+    whatsapp: 564,
+    facebook: 345,
+    instagram: 11
+},
 
 priority:true
 },
@@ -130,7 +172,13 @@ tag:"Oferta Julio",
 offer:"Al contratar la obra con nosotros desarrollamos los diseños gratis.",
 
 views:87,
-clicks:9,
+whatsappClicks:888,
+
+compartir:{
+    whatsapp: 88,
+    facebook: 87,
+    instagram: 87
+},
 
 priority:true
 },
@@ -148,7 +196,13 @@ tag:"PROMOCIONES",
 offer:"Ferreteria con soluciones innovadoras.",
 
 views:35,
-clicks:7,
+whatsappClicks:432,
+
+compartir:{
+    whatsapp: 56,
+    facebook: 34,
+    instagram: 89
+},
 
 priority:true
 },
@@ -166,7 +220,13 @@ tag:"PROMOCIONES",
 offer:"Miel 500ml + Polen 125gr 50.000COP",
 
 views:35,
-clicks:7,
+whatsappClicks:432,
+
+compartir:{
+    whatsapp: 56,
+    facebook: 34,
+    instagram: 89
+},
 
 priority:true
 },
@@ -184,7 +244,13 @@ tag:"Oeerta",
 offer:"Buscas donde exponer tus artes culturaes. canto produccion musical, Bienvenido.",
 
 views:35,
-clicks:7,
+whatsappClicks:432,
+
+compartir:{
+    whatsapp: 56,
+    facebook: 34,
+    instagram: 89
+},
 
 priority:true
 },
@@ -202,13 +268,19 @@ tag:"Oferta",
 offer:"Registro Gratis 2026",
 
 views:35,
-clicks:7,
+whatsappClicks:432,
+
+compartir:{
+    whatsapp: 56,
+    facebook: 34,
+    instagram: 89
+},
 
 priority:true
 },
 
 {
-id:1   ,
+id:12   ,
 name:"Digame Licenciado",
 category:"Educación",
 description:"Nueva tendencia educacional.",
@@ -220,7 +292,13 @@ tag:"PROMOCIONES",
 offer:"Cursos y proyectos de robotica en tu barrio.",
 
 views:35,
-clicks:7,
+whatsappClicks:432,
+
+compartir:{
+    whatsapp: 56,
+    facebook: 34,
+    instagram: 89
+},
 
 priority:true
 },
@@ -238,7 +316,15 @@ tag:"PROMOCIONES",
 offer:"FPaquetes para que tu empresa crezca en internet y en Duitama.",
 
 views:35,
-clicks:7,
+whatsappClicks:999,
+
+compartir:{
+    whatsapp: 99,
+    facebook: 99,
+    instagram: 99
+},
+
+
 
 priority:true
 },
@@ -256,7 +342,13 @@ tag:"PROMOCIONES",
 offer:"conjjuntos en Pijama, Ventas por TikTok",
 
 views:35,
-clicks:7,
+whatsappClicks:432,
+
+compartir:{
+    whatsapp: 56,
+    facebook: 34,
+    instagram: 89
+},
 
 priority:true
 },
@@ -274,16 +366,15 @@ tag:"Oferta",
 offer:"FEnvase portable para todo tipo de publico.",
 
 views:35,
-clicks:7,
+whatsappClicks:432,
+
+compartir:{
+    whatsapp: 56,
+    facebook: 34,
+    instagram: 899
+},
 
 priority:true
 }
-
-
-
-
-
-
-
 
 ];
