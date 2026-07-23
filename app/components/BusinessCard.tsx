@@ -571,16 +571,7 @@ text-gray-500
 📍 {business.location}
 
 </div>
-
-
-
-
-
-
-
-<a
-
-href={`https://wa.me/${business.whatsapp}`}
+<a href={`https://wa.me/${business.whatsapp}`}
 
 
 onClick={()=>{

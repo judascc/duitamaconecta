@@ -12,9 +12,55 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Duitama Conecta - NegoLink",
-  description: "Marketing digital, publicidad, sitios web, marketplace, NegoLink, duitama",
+export const metadata = {
+
+title:
+"Duitama Conecta | Negocios, servicios y promociones de Duitama",
+
+
+description:
+"Encuentra restaurantes, ferreterías, tiendas, servicios y emprendimientos de Duitama en un solo lugar.",
+
+
+keywords:[
+"Duitama",
+"negocios Duitama",
+"comercio Duitama",
+"servicios Duitama",
+"Boyacá",
+"comprar en Duitama"
+],
+
+
+openGraph:{
+
+
+title:
+"Duitama Conecta - Comercio local de Duitama",
+
+
+description:
+"Conecta con negocios, productos y servicios de nuestra ciudad.",
+
+
+url:
+"https://duitamaconecta.vercel.app",
+
+
+siteName:
+"Duitama Conecta",
+
+
+locale:
+"es_CO",
+
+
+type:
+"website"
+
+
+}
+
 };
 
 export default function RootLayout({
